@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester Details</title>
+</head>
+<body>
+    <h1 id="semester-info"></h1>
+
+    <script>
+        // Get the URL parameters
+        const params = new URLSearchParams(window.location.search);
+        const semester = params.get('semester');
+
+        // Display the semester information
+        if (semester) {
+            document.getElementById('semester-info').textContent = `${semester} Semester BTech`;
+        } else {
+            document.getElementById('semester-info').textContent = 'No semester selected';
+        }
+    </script>
+</body>
+</html>
